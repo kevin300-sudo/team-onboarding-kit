@@ -8,12 +8,20 @@ Les informations d'intégration étaient jusqu'ici éparpillées entre des mails
 
 ## Contenu
 
-Le contenu s'enrichit au fil du temps. On y trouvera notamment :
-
-- les procédures d'installation de l'environnement de travail,
-- les conventions de l'équipe,
-- les checklists du nouvel arrivant.
+- [Installation de l'environnement](docs/installation.md) : les outils à installer pour démarrer.
+- [Conventions de l'équipe](docs/conventions-equipe.md) : les règles de travail communes.
+- [Accès au dépôt et outils](docs/acces-et-outils.md) : les différentes façons d'accéder au dépôt.
 
 ## Par où commencer
 
-Si vous venez d'arriver dans l'équipe, parcourez ce README, puis suivez les documents dans l'ordre où ils seront listés ici.
+1. Lire la procédure d'installation et préparer son poste.
+2. Parcourir les conventions de l'équipe.
+3. Choisir son outil d'accès au dépôt.
+
+## Contribuer
+
+Les contributions sont les bienvenues. Voir le guide [CONTRIBUTING](CONTRIBUTING.md) pour la marche à suivre.
+
+## Licence
+
+Ce projet est distribué sous licence MIT. Voir le fichier [LICENSE](LICENSE).

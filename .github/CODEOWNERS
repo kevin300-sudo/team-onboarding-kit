@@ -1,0 +1,10 @@
+# Responsables du dépôt
+# Chaque ligne associe un chemin à un ou plusieurs responsables.
+# Quand une pull request touche ces chemins, les responsables sont
+# automatiquement sollicités pour la relecture.
+
+# Responsable par défaut de tout le dépôt
+*       @kevin300-sudo
+
+# Responsable de la documentation
+/docs/  @kevin300-sudo

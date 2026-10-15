@@ -1,0 +1,24 @@
+name: Verification du depot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verifier-fichiers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Verifier la presence des fichiers cles
+        run: |
+          for f in README.md LICENSE CONTRIBUTING.md docs/index.md; do
+            if [ ! -f "$f" ]; then
+              echo "Fichier manquant : $f"
+              exit 1
+            fi
+          done
+          echo "Tous les fichiers cles sont presents."

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit d'onboarding de l'equipe</title>
+<style>
+  :root{
+    --bleu:#2E5BCC;
+    --bleu-fonce:#1f3f93;
+    --jaune:#FFD200;
+    --encre:#1b2233;
+    --gris:#5b6472;
+    --fond:#f5f7fb;
+    --carte:#ffffff;
+    --ombre:0 10px 30px rgba(27,34,51,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--encre);background:var(--fond);line-height:1.6;
+  }
+  a{color:var(--bleu);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header.hero{
+    background:linear-gradient(135deg,var(--bleu),var(--bleu-fonce));
+    color:#fff;padding:72px 0 64px;position:relative;overflow:hidden;
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;
+    background:var(--jaune);opacity:.18;border-radius:50%;
+  }
+  .badge{
+    display:inline-block;background:var(--jaune);color:var(--encre);
+    font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  header.hero h1{font-size:40px;line-height:1.15;margin-bottom:14px}
+  header.hero p{font-size:19px;max-width:620px;opacity:.95}
+
+  section{padding:56px 0}
+  h2{font-size:26px;margin-bottom:8px}
+  .sous{color:var(--gris);margin-bottom:28px}
+
+  .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .carte{
+    background:var(--carte);border:1px solid #e7ebf3;border-radius:14px;
+    padding:22px;box-shadow:var(--ombre);transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .carte:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(27,34,51,.12)}
+  .carte h3{font-size:18px;margin-bottom:6px}
+  .carte p{color:var(--gris);font-size:15px}
+  .carte .fleche{display:inline-block;margin-top:12px;font-weight:600;color:var(--bleu)}
+
+  .etapes{counter-reset:etape;display:grid;gap:14px;max-width:680px}
+  .etape{
+    background:var(--carte);border:1px solid #e7ebf3;border-radius:12px;padding:16px 18px 16px 58px;
+    position:relative;box-shadow:var(--ombre);
+  }
+  .etape::before{
+    counter-increment:etape;content:counter(etape);
+    position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    width:28px;height:28px;border-radius:50%;background:var(--bleu);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+  }
+
+  footer{
+    background:var(--encre);color:#cdd4e0;padding:36px 0;text-align:center;font-size:15px;
+  }
+  footer strong{color:#fff}
+  footer a{color:var(--jaune)}
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">GitHub Foundations</span>
+      <h1>Kit d'onboarding de l'equipe</h1>
+      <p>Tout ce qu'un nouvel arrivant doit savoir pour devenir autonome, centralise dans un seul depot, tenu a jour par l'equipe.</p>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <h2>Ce que contient le kit</h2>
+    <p class="sous">Une documentation claire, organisee par usage.</p>
+    <div class="grille">
+      <a class="carte" href="docs/installation.html">
+        <h3>Installation</h3>
+        <p>Les outils a installer et la configuration du poste de travail.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+      <a class="carte" href="docs/conventions-equipe.html">
+        <h3>Conventions</h3>
+        <p>Les regles de travail communes : branches, commits, pull requests.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+      <a class="carte" href="docs/acces-et-outils.html">
+        <h3>Acces et outils</h3>
+        <p>Les differentes facons d'acceder au depot de l'equipe.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+      <a class="carte" href="docs/faq.html">
+        <h3>FAQ</h3>
+        <p>Les questions frequentes des nouveaux arrivants et leurs reponses.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+      <a class="carte" href="docs/glossaire.html">
+        <h3>Glossaire</h3>
+        <p>Les termes GitHub utiles pour travailler sur le depot.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+      <a class="carte" href="onboarding/checklist-nouvel-arrivant.html">
+        <h3>Checklist</h3>
+        <p>Le parcours a suivre pas a pas pendant les premiers jours.</p>
+        <span class="fleche">Ouvrir</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:0">
+    <h2>Par ou commencer</h2>
+    <p class="sous">Trois etapes pour etre operationnel.</p>
+    <div class="etapes">
+      <div class="etape">Lire la procedure d'installation et preparer son poste.</div>
+      <div class="etape">Parcourir les conventions de l'equipe.</div>
+      <div class="etape">Faire une premiere contribution de test via une pull request.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      Formation realisee par <strong>Anselme Gildas TCHASSEM BOUTCHOUANG</strong><br>
+      <a href="https://anselme-tchassem.skillsori.com/" target="_blank" rel="noopener">Voir mon portfolio</a>
+    </div>
+  </footer>
+</body>
+</html>

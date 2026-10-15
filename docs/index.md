@@ -7,6 +7,7 @@ Ce sommaire liste les documents disponibles dans ce dossier.
 - [Installation de l'environnement](installation.md) : les outils à installer pour démarrer.
 - [Conventions de l'équipe](conventions-equipe.md) : les règles de travail communes.
 - [Accès au dépôt et outils](acces-et-outils.md) : les différentes façons d'accéder au dépôt.
+- [FAQ des nouveaux arrivants](faq.md) : les questions fréquentes et leurs réponses.
 
 ## Voir aussi
 

@@ -17,3 +17,5 @@ Les termes utiles pour travailler sur le dépôt de l'équipe.
 **Merge** : la fusion d'une branche dans une autre.
 
 **Clone** : une copie locale d'un dépôt distant, avec son historique.
+
+**Fork** : une copie personnelle d'un depot, qui garde le lien avec l'original.

@@ -1,24 +1,28 @@
+# Nom du workflow, tel qu'il apparait dans l'onglet Actions
 name: Verification du depot
 
+# Evenements qui declenchent le workflow
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]        # a chaque push sur la branche main
   pull_request:
-    branches: [ main ]
+    branches: [ main ]        # a chaque pull request visant main
 
+# Liste des jobs executes par le workflow
 jobs:
-  verifier-fichiers:
-    runs-on: ubuntu-latest
-    steps:
+  verifier-fichiers:          # identifiant du job
+    runs-on: ubuntu-latest    # machine (runner) fournie par GitHub
+    steps:                    # etapes du job, executees dans l'ordre
       - name: Recuperer le code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4   # action qui clone le depot dans le runner
 
       - name: Verifier la presence des fichiers cles
-        run: |
+        run: |                      # bloc de commandes shell (le | garde les lignes)
+          # On parcourt la liste des fichiers attendus
           for f in README.md LICENSE CONTRIBUTING.md docs/index.md; do
-            if [ ! -f "$f" ]; then
+            if [ ! -f "$f" ]; then          # si le fichier n'existe pas
               echo "Fichier manquant : $f"
-              exit 1
+              exit 1                        # arrete le job en erreur (coche rouge)
             fi
           done
-          echo "Tous les fichiers cles sont presents."
+          echo "Tous les fichiers cles sont presents."   # succes (coche verte)

@@ -8,6 +8,7 @@ Ce sommaire liste les documents disponibles dans ce dossier.
 - [Conventions de l'équipe](conventions-equipe.md) : les règles de travail communes.
 - [Accès au dépôt et outils](acces-et-outils.md) : les différentes façons d'accéder au dépôt.
 - [FAQ des nouveaux arrivants](faq.md) : les questions fréquentes et leurs réponses.
+- [Depannage](depannage.md) : les problemes frequents et comment les resoudre.
 
 ## Voir aussi
 

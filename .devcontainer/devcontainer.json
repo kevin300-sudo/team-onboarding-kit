@@ -1,0 +1,23 @@
+{
+  // Nom affiche pour cet environnement de developpement
+  "name": "team-onboarding-kit",
+
+  // Image de base du conteneur : environnement universel fourni par Microsoft
+  // (contient Git et les outils courants, pret a l'emploi)
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  // Personnalisations appliquees a l'editeur dans le Codespace
+  "customizations": {
+    "vscode": {
+      // Extensions installees automatiquement a l'ouverture du Codespace
+      "extensions": [
+        "yzhang.markdown-all-in-one",   // aide a la redaction Markdown
+        "GitHub.copilot"                // assistant GitHub Copilot
+      ]
+    }
+  },
+
+  // Commande lancee une seule fois, apres la creation de l'environnement
+  // (ici, affiche la version de Git pour verifier qu'il est bien present)
+  "postCreateCommand": "git --version"
+}
